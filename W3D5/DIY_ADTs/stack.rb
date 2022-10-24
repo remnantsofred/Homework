@@ -27,7 +27,7 @@ class Stack
 
     def peek
       # returns, but doesn't remove, the top element in the stack
-      @ivar.first
+      @ivar.last
     end
 
 
