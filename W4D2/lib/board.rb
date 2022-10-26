@@ -3,15 +3,21 @@ class Board
 
   def initialize(name1, name2)
     @cups = Array.new(14){[]}
-    @cups[]
-
+    self.place_stones
   end
 
   def place_stones
     # helper method to #initialize every non-store cup with four stones each
+    (0..12).each do |i|
+      if i != 6 && i != 13
+        @cups[i] = [:stone, :stone, :stone, :stone]
+      end
+    end
+
   end
 
   def valid_move?(start_pos)
+    
   end
 
   def make_move(start_pos, current_player_name)
