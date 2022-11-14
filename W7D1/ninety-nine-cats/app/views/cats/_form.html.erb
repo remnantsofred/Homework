@@ -1,9 +1,9 @@
-<% path = action == :new ? cats_url : cat_url(cat) %>
-<% submit = action == :new ? 'create' : 'update' %>
-<% back = action == :new ? cats_url : cat_url(cat) %>
+<% path = !cat.persisted? ? cats_url : cat_url(cat) %>
+<% submit = !cat.persisted? ? 'create' : 'update' %>
+<% back = !cat.persisted? ? cats_url : cat_url(cat) %>
 
 <form action="<%= path  %>" method = "post">
-  <% if action == :edit %>
+  <% if cat.persisted? %>
     <input type="hidden" name="_method" value="patch" >
   <% end %>
   <label for="name">Name:</label>
