@@ -67,13 +67,16 @@ let micah = new Elephant("Micah", 143, ["trotting", "playing tic tac toe", "doin
 
 const dinerBreakfast = () => {
   const order = ['scrambled eggs and bacon']
-  console.log(`I'd like ${order}`);
+  // console.log(`I'd like ${order}`);
   return function (newOrder){
     order.push(newOrder);
     console.log(`I'd like ${order.join(' and ')}`);
   };
 }
 
-let bfastOrder = dinerBreakfast();
-bfastOrder("chocolate chip pancakes");
-bfastOrder("grits");
+let kfastOrder = dinerBreakfast()('grits');
+let dfastOrder = dinerBreakfast();
+kfastOrder("chocolate chip pancakes");
+dfastOrder("grits");
+kfastOrder("milkshake");
+
