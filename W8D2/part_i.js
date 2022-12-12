@@ -105,7 +105,7 @@ function isPrime(number){
       return false;
     };
   }
-  return true
+  return true;
 }
 
 // // console.log(isPrime(3)); //true
@@ -134,6 +134,6 @@ function sumOfNPrimes(n){
   return sum
 }
 
-console.log(sumOfNPrimes(0)); //0
-console.log(sumOfNPrimes(1)); //2
-console.log(sumOfNPrimes(4)); //17
+// console.log(sumOfNPrimes(0)); //0
+// console.log(sumOfNPrimes(1)); //2
+// console.log(sumOfNPrimes(4)); //17
